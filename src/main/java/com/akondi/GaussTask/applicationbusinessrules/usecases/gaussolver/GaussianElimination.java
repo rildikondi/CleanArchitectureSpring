@@ -1,4 +1,4 @@
-package com.akondi.GaussTask;
+package com.akondi.GaussTask.applicationbusinessrules.usecases.gaussolver;
 
 import java.util.Scanner;
 

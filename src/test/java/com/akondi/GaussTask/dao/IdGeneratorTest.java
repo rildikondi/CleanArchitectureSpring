@@ -1,5 +1,6 @@
 package com.akondi.GaussTask.dao;
 
+import com.akondi.GaussTask.applicationbusinessrules.usecases.gaussolver.IdGenerator;
 import org.junit.Assert;
 import org.junit.Test;
 

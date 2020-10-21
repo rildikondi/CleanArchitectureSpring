@@ -1,7 +1,8 @@
 package com.akondi.GaussTask.api;
 
 
-import com.akondi.GaussTask.model.EquationSystem;
+import com.akondi.GaussTask.interfaceadapters.controller.GaussSolverController;
+import com.akondi.GaussTask.enterprisebusinessrules.entity.EquationSystem;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;

@@ -1,4 +1,4 @@
-package com.akondi.GaussTask.model;
+package com.akondi.GaussTask.enterprisebusinessrules.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
