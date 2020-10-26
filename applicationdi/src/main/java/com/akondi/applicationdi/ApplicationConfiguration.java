@@ -1,5 +1,17 @@
 package com.akondi.applicationdi;
 
+import com.akondi.inmemorydb.InMemoryDb;
+import com.akondi.inmemorydb.repositories.GaussSolutionRepository;
+import com.akondi.ports.database.Database;
+import com.akondi.ports.presenters.GaussSolutionsOutputBoundary;
+import com.akondi.ports.presenters.GaussSolveOutputBoundary;
+import com.akondi.ports.usescases.Clock;
+import com.akondi.ports.usescases.gausssolve.GaussSolveInputBoundary;
+import com.akondi.ports.usescases.get.gausssolutions.GetGaussSolutionsInputBoundary;
+import com.akondi.presenters.GaussSolutionsPresenter;
+import com.akondi.presenters.GaussSolvePresenter;
+import com.akondi.usecases.gausssolve.GaussSolve;
+import com.akondi.usecases.get.gausssolutions.GetGaussSolutions;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
