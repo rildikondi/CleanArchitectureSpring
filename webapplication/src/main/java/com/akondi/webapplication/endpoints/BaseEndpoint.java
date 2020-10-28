@@ -12,7 +12,7 @@ import java.text.MessageFormat;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Api(value="/solve", description="Operations to calculate solution", tags = "solution")
+@Api(value="/gausssolver", description="Operations to calculate solution", tags = "gausssolver")
 public interface BaseEndpoint {
     @ExceptionHandler
     @ResponseStatus(HttpStatus.BAD_REQUEST)

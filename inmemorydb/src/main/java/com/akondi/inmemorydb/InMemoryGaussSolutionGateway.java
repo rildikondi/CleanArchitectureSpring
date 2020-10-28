@@ -2,19 +2,17 @@ package com.akondi.inmemorydb;
 
 import com.akondi.entities.GaussSolution;
 import com.akondi.inmemorydb.data.GaussSolutionData;
-import com.akondi.inmemorydb.repositories.GaussSolutionRepository;
 import com.akondi.ports.database.GaussSolutionGateway;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Component
 public class InMemoryGaussSolutionGateway implements GaussSolutionGateway {
-    private final GaussSolutionRepository gaussSolutionRepository;
-
-    public InMemoryGaussSolutionGateway(GaussSolutionRepository gaussSolutionRepository) {
-        this.gaussSolutionRepository = gaussSolutionRepository;
+    private List<GaussSolutionData> gaussSolutionList = new ArrayList<>();
+    public InMemoryGaussSolutionGateway() {
     }
 
     @Override
@@ -25,12 +23,12 @@ public class InMemoryGaussSolutionGateway implements GaussSolutionGateway {
                 gaussSolution.getDocument(),
                 gaussSolution.getResult()
         );
-        gaussSolutionRepository.saveGaussSolution(gaussSolutionData);
+        gaussSolutionList.add(gaussSolutionData);
     }
 
     @Override
     public List<GaussSolution> getAllGaussSolutionsData() {
-        return gaussSolutionRepository.getAllGaussSolutions()
+        return gaussSolutionList
                 .stream()
                 .map(this::mapToGaussSolution)
                 .collect(Collectors.toList());
