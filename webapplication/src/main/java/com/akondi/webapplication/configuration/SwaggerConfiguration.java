@@ -26,6 +26,7 @@ public class SwaggerConfiguration extends WebMvcConfigurationSupport {
                 .build()
                 .apiInfo(metaData());
     }
+
     private ApiInfo metaData() {
         return new ApiInfoBuilder()
                 .title("GaussSolver REST API")
@@ -35,6 +36,7 @@ public class SwaggerConfiguration extends WebMvcConfigurationSupport {
                 .licenseUrl("https://www.apache.org/licenses/LICENSE-2.0\"")
                 .build();
     }
+
     @Override
     protected void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("swagger-ui.html")
