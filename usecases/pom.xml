@@ -35,7 +35,7 @@
 
         <dependency>
             <groupId>groupId</groupId>
-            <artifactId>Entities</artifactId>
+            <artifactId>entities</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
