@@ -6,4 +6,5 @@ Clean Architecture with multimodules written in Java and the web layer is build 
 
 References:
 https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
+------------------------------------------------------------------------------
 https://github.com/grant-burgess/clean-architecture-example-java-spring-boot
