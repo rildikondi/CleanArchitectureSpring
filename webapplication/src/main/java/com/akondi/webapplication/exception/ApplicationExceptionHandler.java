@@ -26,7 +26,7 @@ public class ApplicationExceptionHandler extends ResponseEntityExceptionHandler 
 
     @ExceptionHandler
     @ResponseBody
-    public ResponseEntity<com.akondi.webapplication.exception.ErrorResponse> handleControllerException(final HttpServletRequest request, final Throwable throwable) {
+    public ResponseEntity<ErrorResponse> handleControllerException(final HttpServletRequest request, final Throwable throwable) {
         if (throwable instanceof GaussSolutionGateway.BadRequest) {
             return getErrorResponseForStatus(throwable, HttpStatus.BAD_REQUEST, DEFAULT_CLIENT_ERROR_MESSAGE);
         } else if (throwable instanceof GaussSolutionGateway.NotFound) {
@@ -36,10 +36,10 @@ public class ApplicationExceptionHandler extends ResponseEntityExceptionHandler 
         }
     }
 
-    private ResponseEntity<com.akondi.webapplication.exception.ErrorResponse> getErrorResponseForStatus(Throwable ex, HttpStatus httpStatus, String defaultMessage) {
-        String message = com.akondi.webapplication.exception.ErrorMessageMap.errors.getOrDefault(ex.getClass(), defaultMessage);
+    private ResponseEntity<ErrorResponse> getErrorResponseForStatus(Throwable ex, HttpStatus httpStatus, String defaultMessage) {
+        String message = ErrorMessageMap.errors.getOrDefault(ex.getClass(), defaultMessage);
         return new ResponseEntity<>(
-                com.akondi.webapplication.exception.ErrorResponse
+                ErrorResponse
                         .builder()
                         .addError(message)
                         .build(),
@@ -47,10 +47,10 @@ public class ApplicationExceptionHandler extends ResponseEntityExceptionHandler 
         );
     }
 
-    private ResponseEntity<com.akondi.webapplication.exception.ErrorResponse> getDefaultErrorResponse(final Throwable throwable) {
+    private ResponseEntity<ErrorResponse> getDefaultErrorResponse(final Throwable throwable) {
         logger.fatal("Unhandled exception ", throwable);
         return new ResponseEntity<>(
-                com.akondi.webapplication.exception.ErrorResponse
+                ErrorResponse
                         .builder()
                         .addError("Oops! Something really bad happened and we couldn't recover.")
                         .build(),
@@ -125,7 +125,7 @@ public class ApplicationExceptionHandler extends ResponseEntityExceptionHandler 
 
     private ResponseEntity<Object> formatErrorResponseForHttpMessageNotReadable(final String errorMessage) {
         return new ResponseEntity<>(
-                com.akondi.webapplication.exception.ErrorResponse
+                ErrorResponse
                         .builder()
                         .addError(errorMessage)
                         .build(),

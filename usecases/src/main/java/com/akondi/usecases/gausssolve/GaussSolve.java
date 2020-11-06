@@ -11,20 +11,21 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class GaussSolve implements GaussSolveInputBoundary {
     private final GaussSolveOutputBoundary presenter;
     private final GaussSolutionGateway gaussSolutionGateway;
-    private final IdGenerator idGenerator = new IdGenerator();
+    private final IdGenerator idGenerator;
     private final Clock clock;
 
     public GaussSolve(GaussSolveOutputBoundary presenter,
                       GaussSolutionGateway gaussSolutionGateway,
-                      Clock clock) {
+                      Clock clock,
+                      IdGenerator idGenerator) {
         this.presenter = presenter;
         this.gaussSolutionGateway = gaussSolutionGateway;
         this.clock = clock;
+        this.idGenerator = idGenerator;
     }
 
 
     public void execute(GaussSolveRequest request) {
-
         double[] solution = null;
         ObjectMapper objectMapper = new ObjectMapper();
         try {
@@ -41,7 +42,6 @@ public class GaussSolve implements GaussSolveInputBoundary {
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
-
         presenter.present(new GaussSolveResponse(solution));
     }
 }

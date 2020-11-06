@@ -18,6 +18,5 @@ public class GaussSolutionsPresenter extends BaseGaussSolutionPresenter implemen
                 .map(BaseGaussSolutionPresenter::mapToGaussSolutionsViewModel)
                 .forEach(gaussSolutionsViewModelBuilder::showSolutionsDataViewModel);
         viewModel = gaussSolutionsViewModelBuilder.build();
-
     }
 }

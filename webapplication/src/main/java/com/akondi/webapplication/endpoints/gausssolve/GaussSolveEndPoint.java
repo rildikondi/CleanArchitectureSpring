@@ -6,6 +6,7 @@ import com.akondi.ports.usescases.gausssolve.GaussSolveInputBoundary;
 import com.akondi.ports.usescases.gausssolve.GaussSolveRequest;
 import com.akondi.webapplication.endpoints.BaseEndpoint;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.lang.NonNull;
 import org.springframework.web.bind.annotation.*;
@@ -19,6 +20,7 @@ public class GaussSolveEndPoint implements BaseEndpoint {
     private final GaussSolveInputBoundary useCase;
     private final GaussSolveOutputBoundary presenter;
 
+    @Autowired
     public GaussSolveEndPoint(GaussSolveInputBoundary useCase, GaussSolveOutputBoundary presenter) {
         this.useCase = useCase;
         this.presenter = presenter;

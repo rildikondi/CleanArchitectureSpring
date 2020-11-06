@@ -1,13 +1,17 @@
 package com.akondi.ports.presenters;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Getter
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class GaussSolutionViewModel {
-    private final long id;
-    private final String date;
-    private final String document;
-    private final String result;
+    private  long id;
+    private  String date;
+    private  String document;
+    private  String result;
 }

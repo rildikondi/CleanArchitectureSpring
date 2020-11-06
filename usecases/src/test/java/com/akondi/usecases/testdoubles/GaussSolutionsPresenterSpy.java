@@ -1,0 +1,33 @@
+package com.akondi.usecases.testdoubles;
+
+import com.akondi.ports.presenters.GaussSolutionsOutputBoundary;
+import com.akondi.ports.presenters.GaussSolutionsViewModel;
+import com.akondi.ports.usescases.get.gausssolutions.GaussSolutionsResponse;
+
+public class GaussSolutionsPresenterSpy  implements GaussSolutionsOutputBoundary {
+    private boolean isGaussSolutionsPresented;
+    private GaussSolutionsResponse gaussSolutionsResponse;
+
+    @Override
+    public GaussSolutionsViewModel getViewModel() {
+        return null;
+    }
+
+    @Override
+    public void present(GaussSolutionsResponse gaussSolutionsResponse) {
+        isGaussSolutionsPresented = true;
+        this.gaussSolutionsResponse = gaussSolutionsResponse;
+    }
+
+    public boolean isGaussSolutionsPresented() {
+        return isGaussSolutionsPresented;
+    }
+
+    public GaussSolutionsResponse getGaussSolutionsResponse() {
+        return gaussSolutionsResponse;
+    }
+
+    public void setGaussSolutionsResponse(GaussSolutionsResponse gaussSolutionsResponse) {
+        this.gaussSolutionsResponse = gaussSolutionsResponse;
+    }
+}
