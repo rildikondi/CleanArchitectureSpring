@@ -7,6 +7,7 @@ import com.akondi.ports.presenters.GaussSolutionsOutputBoundary;
 import com.akondi.ports.presenters.GaussSolveOutputBoundary;
 import com.akondi.ports.usescases.Clock;
 import com.akondi.ports.usescases.gausssolve.GaussSolveInputBoundary;
+import com.akondi.ports.usescases.gausssolve.IdGenerator;
 import com.akondi.ports.usescases.get.gausssolutions.GetGaussSolutionsInputBoundary;
 import com.akondi.presenters.GaussSolutionsPresenter;
 import com.akondi.presenters.GaussSolvePresenter;
@@ -35,10 +36,10 @@ public class ApplicationConfiguration {
         };
     }
 
-//    @Bean
-//    public IdGenerator idGenerator() {
-//        return new IdGenerator();
-//    }
+    @Bean
+    public IdGenerator idGenerator() {
+        return new IdGenerator();
+    }
 
     @Bean
     public GaussSolutionsOutputBoundary gaussSolutionsOutputBoundary() {
@@ -57,7 +58,6 @@ public class ApplicationConfiguration {
 
     @Bean
     public GaussSolveInputBoundary gaussSolveInputBoundary(GaussSolveOutputBoundary gaussSolveOutputBoundary, Database database, Clock clock) {
-        return new GaussSolve(gaussSolveOutputBoundary, database.gaussSolutionGateway(), clock);
+        return new GaussSolve(gaussSolveOutputBoundary, database.gaussSolutionGateway(), clock, idGenerator());
     }
-
 }
