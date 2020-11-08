@@ -1,4 +1,4 @@
-package com.akondi.interfaceadapters.presenters;
+package com.akondi.interfaceadapters.presenters.gausssolve;
 
 import com.akondi.interfaceadapters.viewmodels.GaussSolutionsViewModel;
 
