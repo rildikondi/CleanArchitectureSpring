@@ -1,7 +1,7 @@
 package com.akondi.webapplication;
 
-import com.akondi.interfaceadapters.presenters.gausssolve.GaussSolutionsViewModelOutputBoundary;
-import com.akondi.interfaceadapters.presenters.getgausssolutions.GaussSolveViewModelOutputBoundary;
+import com.akondi.interfaceadapters.presenters.gausssolve.GaussSolutionsPresenterOutputBoundary;
+import com.akondi.interfaceadapters.presenters.getgausssolutions.GaussSolvePresenterOutputBoundary;
 import com.akondi.interfaceadapters.viewmodels.GaussSolutionViewModel;
 import com.akondi.interfaceadapters.viewmodels.GaussSolutionsViewModel;
 import com.akondi.interfaceadapters.viewmodels.GaussSolveViewModel;
@@ -65,13 +65,13 @@ public class EndpointTests {
     @MockBean
     private GaussSolveInputBoundary gaussSolveInputBoundary;
     @MockBean
-    private GaussSolveViewModelOutputBoundary gaussSolveViewModelOutputBoundary;
+    private GaussSolvePresenterOutputBoundary gaussSolvePresenterOutputBoundary;
     @MockBean
     private Database database;
     @MockBean
     private GetGaussSolutionsInputBoundary getGaussSolutionsInputBoundary;
     @MockBean
-    private GaussSolutionsViewModelOutputBoundary gaussSolutionsViewModelOutputBoundary;
+    private GaussSolutionsPresenterOutputBoundary gaussSolutionsPresenterOutputBoundary;
     @MockBean
     private Clock clock;
     @MockBean
@@ -97,7 +97,7 @@ public class EndpointTests {
     @Test
     public void can_solve_linear_equations() throws Exception {
         NewGaussSolveRequest request = new NewGaussSolveRequest(a, b);
-        when(gaussSolveViewModelOutputBoundary.getViewModel()).thenReturn(new GaussSolveViewModel(solution));
+        when(gaussSolvePresenterOutputBoundary.getViewModel()).thenReturn(new GaussSolveViewModel(solution));
         mockMvc.perform(
                 post(URI.create("/api/v1/gausssolver"))
                         .contentType(MediaType.APPLICATION_JSON_UTF8_VALUE)
@@ -143,7 +143,7 @@ public class EndpointTests {
         solutionList.add(gaussSolutionViewModel);
         GaussSolutionsViewModel gaussSolutionsViewModel = new GaussSolutionsViewModel(solutionList);
 
-        when(gaussSolutionsViewModelOutputBoundary.getViewModel()).thenReturn(gaussSolutionsViewModel);
+        when(gaussSolutionsPresenterOutputBoundary.getViewModel()).thenReturn(gaussSolutionsViewModel);
         mockMvc.perform(
                 get("/api/v1/gausssolver")
         )

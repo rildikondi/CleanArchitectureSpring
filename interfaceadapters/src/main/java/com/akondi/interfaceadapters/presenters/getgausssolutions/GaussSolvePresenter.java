@@ -4,7 +4,7 @@ import com.akondi.interfaceadapters.viewmodels.GaussSolveViewModel;
 import com.akondi.usecases.gausssolve.GaussSolveOutputBoundary;
 import com.akondi.usecases.gausssolve.GaussSolveResponse;
 
-public class GaussSolvePresenter implements GaussSolveOutputBoundary, GaussSolveViewModelOutputBoundary {
+public class GaussSolvePresenter implements GaussSolveOutputBoundary, GaussSolvePresenterOutputBoundary {
     private GaussSolveViewModel viewModel;
 
     @Override

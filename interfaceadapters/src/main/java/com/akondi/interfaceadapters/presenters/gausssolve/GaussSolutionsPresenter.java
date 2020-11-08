@@ -6,7 +6,7 @@ import com.akondi.interfaceadapters.viewmodels.GaussSolutionsViewModel;
 import com.akondi.usecases.get.gausssolutions.GaussSolutionsOutputBoundary;
 
 public class GaussSolutionsPresenter extends BaseGaussSolutionPresenter
-        implements GaussSolutionsOutputBoundary, GaussSolutionsViewModelOutputBoundary {
+        implements GaussSolutionsOutputBoundary, GaussSolutionsPresenterOutputBoundary {
 
     private GaussSolutionsViewModel viewModel;
 

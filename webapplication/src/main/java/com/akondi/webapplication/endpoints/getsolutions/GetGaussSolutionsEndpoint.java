@@ -2,7 +2,7 @@ package com.akondi.webapplication.endpoints.getsolutions;
 
 import com.akondi.interfaceadapters.controllers.getgausssolutions.GetGaussSolutionsControllerInputBoundary;
 import com.akondi.interfaceadapters.controllers.getgausssolutions.GetSolutionsControllerRequest;
-import com.akondi.interfaceadapters.presenters.gausssolve.GaussSolutionsViewModelOutputBoundary;
+import com.akondi.interfaceadapters.presenters.gausssolve.GaussSolutionsPresenterOutputBoundary;
 import com.akondi.interfaceadapters.viewmodels.GaussSolutionsViewModel;
 import com.akondi.webapplication.endpoints.BaseEndpoint;
 import io.swagger.annotations.ApiOperation;
@@ -16,11 +16,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class GetGaussSolutionsEndpoint implements BaseEndpoint {
 
     private final GetGaussSolutionsControllerInputBoundary controller;
-    private final GaussSolutionsViewModelOutputBoundary presenter;
+    private final GaussSolutionsPresenterOutputBoundary presenter;
 
     public GetGaussSolutionsEndpoint(
             GetGaussSolutionsControllerInputBoundary controller,
-            GaussSolutionsViewModelOutputBoundary presenter) {
+            GaussSolutionsPresenterOutputBoundary presenter) {
         this.controller = controller;
         this.presenter = presenter;
     }

@@ -26,7 +26,7 @@ import java.time.LocalDate;
 public class ApplicationConfiguration {
     @Bean
     public Database database() {
-                return new InMemoryDb();
+        return new InMemoryDb();
     }
 
     @Bean
@@ -45,7 +45,6 @@ public class ApplicationConfiguration {
     }
 
 
-
     @Bean
     public GaussSolutionsOutputBoundary gaussSolutionsOutputBoundary() {
         return new GaussSolutionsPresenter();
@@ -57,12 +56,12 @@ public class ApplicationConfiguration {
     }
 
     @Bean
-    public GetGaussSolutionsControllerInputBoundary getGaussSolutionsControllerInputBoundary(GetGaussSolutionsInputBoundary getGaussSolutionsInputBoundary){
+    public GetGaussSolutionsControllerInputBoundary getGaussSolutionsControllerInputBoundary(GetGaussSolutionsInputBoundary getGaussSolutionsInputBoundary) {
         return new GetGaussSolutionsController(getGaussSolutionsInputBoundary);
     }
 
 //    @Bean
-//    public GaussSolutionsViewModelOutputBoundary gaussSolutionsViewModelOutputBoundary(GaussSolutionsOutputBoundary gaussSolutionsOutputBoundary) {
+//    public GaussSolutionsPresenterOutputBoundary gaussSolutionsViewModelOutputBoundary(GaussSolutionsOutputBoundary gaussSolutionsOutputBoundary) {
 //        return (GaussSolutionsPresenter) gaussSolutionsOutputBoundary();
 //    }
 
@@ -82,7 +81,7 @@ public class ApplicationConfiguration {
     }
 //
 //    @Bean
-//    public GaussSolveViewModelOutputBoundary gaussSolveViewModelOutputBoundary(GaussSolveOutputBoundary gaussSolveOutputBoundary) {
+//    public GaussSolvePresenterOutputBoundary gaussSolveViewModelOutputBoundary(GaussSolveOutputBoundary gaussSolveOutputBoundary) {
 //        return (GaussSolvePresenter) gaussSolveOutputBoundary();
 //    }
 }
