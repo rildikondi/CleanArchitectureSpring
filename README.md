@@ -8,7 +8,7 @@ Clean Architecture with multimodules written in Java and the web layer is build 
 <img src="https://github.com/rildikondi/CleanArchitectureSpring/blob/clean_architecture_by_layer/images/main_module_schema.jpg" >
 
 
-<img src="https://github.com/rildikondi/CleanArchitectureSpring/tree/clean_architecture_by_layer/images/webapplication_interaction.jpg" >
+<img src="https://github.com/rildikondi/CleanArchitectureSpring/blob/clean_architecture_by_layer/images/webapplication_schema.jpg" >
 
 ## References:
 [https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
