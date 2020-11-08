@@ -19,6 +19,9 @@ Clean Architecture main directory contains all the modules which realize the wor
 
 <img src="https://github.com/rildikondi/CleanArchitectureSpring/blob/clean_architecture_by_layer/images/main_module_schema.jpg" >
 
+
+<br>
+<br>
 Dependency direction of the modules from the outermost to the center. Outside layer depends on the layer below it.
 <br>The inner layer has no dependency on the layer above and no information for any class or method from it.
 <br>Changes on the outer layer should not cause changes to the inner layer it.
@@ -26,16 +29,17 @@ Dependency direction of the modules from the outermost to the center. Outside la
 <img src="https://github.com/rildikondi/CleanArchitectureSpring/blob/clean_architecture_by_layer/images/dependency_direction.jpg" >
 
 
-
+<br>
+<br>
 <b>applicationdi</b> module uses <b>inmemorydb, usecases, interfaceadpters</b> modules to inject the dependencies that are needed in this application.
 
 <img src="https://github.com/rildikondi/CleanArchitectureSpring/blob/clean_architecture_by_layer/images/applicationdi_schema.jpg" >
 
 <b>Webapplication</b> module is part of <b>framework and drivers layer</b>. Framework and drivers layer is the outermost layer.
 <b>webapplication</b> module depends on the layer below it: <b>interface adapters</b>.
-<b>webapplication</b> module uses <b>spring framework</b>. The endpoints which are in this layer with help of spring annotations build together
-the entrypoints for the input.
-Example schema of one case of Gauss elimination for linear equations with Clean Architecture.
+<br><b>webapplication</b> module uses <b>spring framework</b>.
+<br>The endpoints which are in this layer with help of spring annotations build together the entrypoints for the input.
+<br>Example schema of one case of Gauss elimination for linear equations with Clean Architecture.
 
 <img src="https://github.com/rildikondi/CleanArchitectureSpring/blob/clean_architecture_by_layer/images/webapplication_schema.jpg" >
 
