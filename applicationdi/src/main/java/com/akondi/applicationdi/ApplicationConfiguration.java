@@ -1,6 +1,8 @@
 package com.akondi.applicationdi;
 
 import com.akondi.inmemorydb.InMemoryDb;
+import com.akondi.interfaceadapters.presenters.GaussSolutionsViewModelOutputBoundary;
+import com.akondi.interfaceadapters.presenters.GaussSolveViewModelOutputBoundary;
 import com.akondi.usecases.database.Database;
 import com.akondi.usecases.get.gausssolutions.GaussSolutionsOutputBoundary;
 import com.akondi.usecases.gausssolve.GaussSolveOutputBoundary;
@@ -50,6 +52,7 @@ public class ApplicationConfiguration {
         return new GetGaussSolutions(gaussSolutionsOutputBoundary, database.gaussSolutionGateway());
     }
 
+//    @Bean
 //    public GaussSolutionsViewModelOutputBoundary gaussSolutionsViewModelOutputBoundary(GaussSolutionsOutputBoundary gaussSolutionsOutputBoundary) {
 //        return (GaussSolutionsPresenter) gaussSolutionsOutputBoundary();
 //    }
@@ -63,8 +66,8 @@ public class ApplicationConfiguration {
     public GaussSolveInputBoundary gaussSolveInputBoundary(GaussSolveOutputBoundary gaussSolveOutputBoundary, Database database, Clock clock) {
         return new GaussSolve(gaussSolveOutputBoundary, database.gaussSolutionGateway(), clock, idGenerator());
     }
-
-////    @Bean("gaussSolveViewModel")
+//
+//    @Bean
 //    public GaussSolveViewModelOutputBoundary gaussSolveViewModelOutputBoundary(GaussSolveOutputBoundary gaussSolveOutputBoundary) {
 //        return (GaussSolvePresenter) gaussSolveOutputBoundary();
 //    }
