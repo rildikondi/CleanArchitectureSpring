@@ -8,10 +8,15 @@ Clean Architecture with multimodules written in Java and the web layer is build 
 
 Implementation schema of  Gauss elimination for linear equations with Clean Architecture.  
 Clean Architecture main directory contains all the modules which realize the working of application.
+
 webapplication, inmemorydb and applicationdi modules are part of the Framework and drivers layer.
+
 interfaceadpters module is part of Interface Adapters layer.
+
 usecases module is part of Application Business Rules layer.
+
 entities module is part of Enterprise Business Rules layer.
+
 <img src="https://github.com/rildikondi/CleanArchitectureSpring/blob/clean_architecture_by_layer/images/main_module_schema.jpg" >
 
 
