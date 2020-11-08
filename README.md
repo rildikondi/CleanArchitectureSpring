@@ -1,6 +1,6 @@
 # Clean Architecture
 
-Clean Architecture with multimodules written in Java and the web layer is build with the help of Spring.
+<b>Clean Architecture</b> with multimodules written in Java and the web layer is build with the help of <b>Spring</b>.
 
 <img src="https://blog.cleancoder.com/uncle-bob/images/2012-08-13-the-clean-architecture/CleanArchitecture.jpg" alt="Clean Architecture img">
 
@@ -24,9 +24,9 @@ Clean Architecture main directory contains all the modules which realize the wor
 
 <img src="https://github.com/rildikondi/CleanArchitectureSpring/blob/clean_architecture_by_layer/images/applicationdi_schema.jpg" >
 
-<b>Webapplication</b> module is part of <b>framework and drivers layer</b>.Framework and drivers layer is the outermost layer.
-webapplication module depends on layers below it such as interface adapters and usecases.
-webapplication module uses <b>spring framework</b>. The endpoints which are in this layer with help of spring annotations build together
+<b>Webapplication</b> module is part of <b>framework and drivers layer</b>. Framework and drivers layer is the outermost layer.
+<b>webapplication</b> module depends on layers below it such as <b>interface adapters and usecases</b>.
+<b>webapplication</b> module uses <b>spring framework</b>. The endpoints which are in this layer with help of spring annotations build together
 the entrypoints for the input.
 Example schema of one case of Gauss elimination for linear equations with Clean Architecture.
 
