@@ -7,7 +7,6 @@ import com.akondi.usecases.database.inmemory.InMemoryDatabase;
 import com.akondi.usecases.testdoubles.ClockStub;
 import com.akondi.usecases.testdoubles.GaussSolvePresenterSpy;
 import com.akondi.usecases.testdoubles.IdGeneratorStub;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -16,7 +15,6 @@ import java.util.List;
 
 import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.hasProperty;
 import static org.hamcrest.Matchers.hasSize;
 
 public class GaussSolveTest {
@@ -47,21 +45,6 @@ public class GaussSolveTest {
         request = new GaussSolveRequest(a, b);
     }
 
-
-    @Test(expected = GaussSolutionGateway.EquationSystemBadDataException.class)
-    public void cannot_gaussSolve_with_bad_data() {
-        // GIVEN
-        database.gaussSolutionGateway().saveGaussSolution(
-                new GaussSolution(
-                        firstId,
-                        firstDate,
-                        firstDocument,
-                        firstResult)
-                );
-        // WHEN
-        useCase.execute(request);
-    }
-
     @Test
     public void can_solve_gaussSolution() {
         //GIVEN
@@ -73,5 +56,4 @@ public class GaussSolveTest {
         List<GaussSolution> gaussSolutions = database.gaussSolutionGateway().getAllGaussSolutionsData();
         assertThat(gaussSolutions, hasSize(1));
     }
-
 }
