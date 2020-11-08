@@ -1,7 +1,7 @@
 package com.akondi.webapplication;
 
-import com.akondi.interfaceadapters.presenters.GaussSolutionsViewModelOutputBoundary;
-import com.akondi.interfaceadapters.presenters.GaussSolveViewModelOutputBoundary;
+import com.akondi.interfaceadapters.presenters.gausssolve.GaussSolutionsViewModelOutputBoundary;
+import com.akondi.interfaceadapters.presenters.getgausssolutions.GaussSolveViewModelOutputBoundary;
 import com.akondi.interfaceadapters.viewmodels.GaussSolutionViewModel;
 import com.akondi.interfaceadapters.viewmodels.GaussSolutionsViewModel;
 import com.akondi.interfaceadapters.viewmodels.GaussSolveViewModel;

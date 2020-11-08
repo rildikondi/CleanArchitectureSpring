@@ -73,18 +73,10 @@
 		</dependency>
 		<dependency>
 			<groupId>com.akondi</groupId>
-			<artifactId>usecases</artifactId>
-			<version>1.0-SNAPSHOT</version>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.akondi</groupId>
 			<artifactId>interfaceadapters</artifactId>
 			<version>1.0-SNAPSHOT</version>
 			<scope>compile</scope>
 		</dependency>
-
-
 	</dependencies>
 
 	<build>
