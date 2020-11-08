@@ -1,6 +1,6 @@
 package com.akondi.usecases.testdoubles;
 
-import com.akondi.ports.usescases.Clock;
+import com.akondi.usecases.gausssolve.Clock;
 
 import java.time.LocalDate;
 

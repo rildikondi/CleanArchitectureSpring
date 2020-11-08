@@ -2,7 +2,7 @@ package com.akondi.inmemorydb;
 
 import com.akondi.entities.GaussSolution;
 import com.akondi.inmemorydb.data.GaussSolutionData;
-import com.akondi.ports.database.GaussSolutionGateway;
+import com.akondi.usecases.database.GaussSolutionGateway;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -12,6 +12,7 @@ import java.util.stream.Collectors;
 @Component
 public class InMemoryGaussSolutionGateway implements GaussSolutionGateway {
     private List<GaussSolutionData> gaussSolutionList = new ArrayList<>();
+
     public InMemoryGaussSolutionGateway() {
     }
 

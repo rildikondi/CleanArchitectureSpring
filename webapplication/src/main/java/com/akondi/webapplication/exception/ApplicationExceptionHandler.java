@@ -1,6 +1,6 @@
 package com.akondi.webapplication.exception;
 
-import com.akondi.ports.database.GaussSolutionGateway;
+import com.akondi.usecases.database.GaussSolutionGateway;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 import org.springframework.http.HttpHeaders;

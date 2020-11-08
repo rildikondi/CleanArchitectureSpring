@@ -1,17 +1,11 @@
 package com.akondi.usecases.testdoubles;
 
-import com.akondi.ports.presenters.GaussSolveOutputBoundary;
-import com.akondi.ports.presenters.GaussSolveViewModel;
-import com.akondi.ports.usescases.gausssolve.GaussSolveResponse;
+import com.akondi.usecases.gausssolve.GaussSolveOutputBoundary;
+import com.akondi.usecases.gausssolve.GaussSolveResponse;
 
 public class GaussSolvePresenterSpy implements GaussSolveOutputBoundary {
     private boolean isGaussSolvePresented;
     private GaussSolveResponse gaussSolveResponse;
-
-    @Override
-    public GaussSolveViewModel getViewModel() {
-        return null;
-    }
 
     @Override
     public void present(GaussSolveResponse gaussSolveResponse) {

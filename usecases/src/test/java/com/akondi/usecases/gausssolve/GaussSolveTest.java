@@ -1,10 +1,8 @@
 package com.akondi.usecases.gausssolve;
 
 import com.akondi.entities.GaussSolution;
-import com.akondi.ports.database.Database;
-import com.akondi.ports.database.GaussSolutionGateway;
-import com.akondi.ports.presenters.GaussSolveOutputBoundary;
-import com.akondi.ports.usescases.gausssolve.GaussSolveRequest;
+import com.akondi.usecases.database.Database;
+import com.akondi.usecases.database.GaussSolutionGateway;
 import com.akondi.usecases.database.inmemory.InMemoryDatabase;
 import com.akondi.usecases.testdoubles.ClockStub;
 import com.akondi.usecases.testdoubles.GaussSolvePresenterSpy;

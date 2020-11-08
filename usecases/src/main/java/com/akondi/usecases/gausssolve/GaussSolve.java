@@ -1,10 +1,7 @@
 package com.akondi.usecases.gausssolve;
 
 import com.akondi.entities.GaussSolution;
-import com.akondi.ports.database.GaussSolutionGateway;
-import com.akondi.ports.presenters.GaussSolveOutputBoundary;
-import com.akondi.ports.usescases.Clock;
-import com.akondi.ports.usescases.gausssolve.*;
+import com.akondi.usecases.database.GaussSolutionGateway;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -24,7 +21,7 @@ public class GaussSolve implements GaussSolveInputBoundary {
         this.idGenerator = idGenerator;
     }
 
-
+    @Override
     public void execute(GaussSolveRequest request) {
         double[] solution = null;
         ObjectMapper objectMapper = new ObjectMapper();

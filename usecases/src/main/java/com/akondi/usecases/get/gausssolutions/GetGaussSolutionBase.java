@@ -1,7 +1,6 @@
 package com.akondi.usecases.get.gausssolutions;
 
 import com.akondi.entities.GaussSolution;
-import com.akondi.ports.usescases.get.gausssolutions.GaussSolutionResponse;
 
 public abstract class GetGaussSolutionBase {
 

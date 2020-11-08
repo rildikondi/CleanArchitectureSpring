@@ -1,12 +1,16 @@
 package com.akondi.webapplication;
 
-import com.akondi.ports.database.Database;
-import com.akondi.ports.database.GaussSolutionGateway;
-import com.akondi.ports.presenters.*;
-import com.akondi.ports.usescases.Clock;
-import com.akondi.ports.usescases.gausssolve.GaussSolveInputBoundary;
-import com.akondi.ports.usescases.gausssolve.IdGenerator;
-import com.akondi.ports.usescases.get.gausssolutions.GetGaussSolutionsInputBoundary;
+import com.akondi.interfaceadapters.presenters.GaussSolutionsViewModelOutputBoundary;
+import com.akondi.interfaceadapters.presenters.GaussSolveViewModelOutputBoundary;
+import com.akondi.interfaceadapters.viewmodels.GaussSolutionViewModel;
+import com.akondi.interfaceadapters.viewmodels.GaussSolutionsViewModel;
+import com.akondi.interfaceadapters.viewmodels.GaussSolveViewModel;
+import com.akondi.usecases.database.Database;
+import com.akondi.usecases.database.GaussSolutionGateway;
+import com.akondi.usecases.gausssolve.Clock;
+import com.akondi.usecases.gausssolve.GaussSolveInputBoundary;
+import com.akondi.usecases.gausssolve.IdGenerator;
+import com.akondi.usecases.get.gausssolutions.GetGaussSolutionsInputBoundary;
 import com.akondi.webapplication.endpoints.gausssolve.GaussSolveEndPoint;
 import com.akondi.webapplication.endpoints.getsolutions.GetGaussSolutionsEndpoint;
 import com.akondi.webapplication.exception.ErrorMessageMap;
@@ -61,13 +65,13 @@ public class EndpointTests {
     @MockBean
     private GaussSolveInputBoundary gaussSolveInputBoundary;
     @MockBean
-    private GaussSolveOutputBoundary gaussSolveOutputBoundary;
+    private GaussSolveViewModelOutputBoundary gaussSolveViewModelOutputBoundary;
     @MockBean
     private Database database;
     @MockBean
     private GetGaussSolutionsInputBoundary getGaussSolutionsInputBoundary;
     @MockBean
-    private GaussSolutionsOutputBoundary gaussSolutionsOutputBoundary;
+    private GaussSolutionsViewModelOutputBoundary gaussSolutionsViewModelOutputBoundary;
     @MockBean
     private Clock clock;
     @MockBean
@@ -93,7 +97,7 @@ public class EndpointTests {
     @Test
     public void can_solve_linear_equations() throws Exception {
         NewGaussSolveRequest request = new NewGaussSolveRequest(a, b);
-        when(gaussSolveOutputBoundary.getViewModel()).thenReturn(new GaussSolveViewModel(solution));
+        when(gaussSolveViewModelOutputBoundary.getViewModel()).thenReturn(new GaussSolveViewModel(solution));
         mockMvc.perform(
                 post(URI.create("/api/v1/gausssolver"))
                         .contentType(MediaType.APPLICATION_JSON_UTF8_VALUE)
@@ -139,7 +143,7 @@ public class EndpointTests {
         solutionList.add(gaussSolutionViewModel);
         GaussSolutionsViewModel gaussSolutionsViewModel = new GaussSolutionsViewModel(solutionList);
 
-        when(gaussSolutionsOutputBoundary.getViewModel()).thenReturn(gaussSolutionsViewModel);
+        when(gaussSolutionsViewModelOutputBoundary.getViewModel()).thenReturn(gaussSolutionsViewModel);
         mockMvc.perform(
                 get("/api/v1/gausssolver")
         )

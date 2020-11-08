@@ -1,7 +1,7 @@
 package com.akondi.usecases.database.inmemory;
 
 import com.akondi.entities.GaussSolution;
-import com.akondi.ports.database.GaussSolutionGateway;
+import com.akondi.usecases.database.GaussSolutionGateway;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;

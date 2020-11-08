@@ -1,16 +1,15 @@
 package com.akondi.applicationdi;
 
-
 import com.akondi.inmemorydb.InMemoryDb;
-import com.akondi.ports.database.Database;
-import com.akondi.ports.presenters.GaussSolutionsOutputBoundary;
-import com.akondi.ports.presenters.GaussSolveOutputBoundary;
-import com.akondi.ports.usescases.Clock;
-import com.akondi.ports.usescases.gausssolve.GaussSolveInputBoundary;
-import com.akondi.ports.usescases.gausssolve.IdGenerator;
-import com.akondi.ports.usescases.get.gausssolutions.GetGaussSolutionsInputBoundary;
-import com.akondi.presenters.GaussSolutionsPresenter;
-import com.akondi.presenters.GaussSolvePresenter;
+import com.akondi.usecases.database.Database;
+import com.akondi.usecases.get.gausssolutions.GaussSolutionsOutputBoundary;
+import com.akondi.usecases.gausssolve.GaussSolveOutputBoundary;
+import com.akondi.usecases.gausssolve.Clock;
+import com.akondi.usecases.gausssolve.GaussSolveInputBoundary;
+import com.akondi.usecases.gausssolve.IdGenerator;
+import com.akondi.usecases.get.gausssolutions.GetGaussSolutionsInputBoundary;
+import com.akondi.interfaceadapters.presenters.GaussSolutionsPresenter;
+import com.akondi.interfaceadapters.presenters.GaussSolvePresenter;
 import com.akondi.usecases.gausssolve.GaussSolve;
 import com.akondi.usecases.get.gausssolutions.GetGaussSolutions;
 import org.springframework.context.annotation.Bean;
@@ -23,7 +22,7 @@ import java.time.LocalDate;
 public class ApplicationConfiguration {
     @Bean
     public Database database() {
-        return new InMemoryDb();
+                return new InMemoryDb();
     }
 
     @Bean
@@ -51,6 +50,10 @@ public class ApplicationConfiguration {
         return new GetGaussSolutions(gaussSolutionsOutputBoundary, database.gaussSolutionGateway());
     }
 
+//    public GaussSolutionsViewModelOutputBoundary gaussSolutionsViewModelOutputBoundary(GaussSolutionsOutputBoundary gaussSolutionsOutputBoundary) {
+//        return (GaussSolutionsPresenter) gaussSolutionsOutputBoundary();
+//    }
+
     @Bean
     public GaussSolveOutputBoundary gaussSolveOutputBoundary() {
         return new GaussSolvePresenter();
@@ -60,4 +63,9 @@ public class ApplicationConfiguration {
     public GaussSolveInputBoundary gaussSolveInputBoundary(GaussSolveOutputBoundary gaussSolveOutputBoundary, Database database, Clock clock) {
         return new GaussSolve(gaussSolveOutputBoundary, database.gaussSolutionGateway(), clock, idGenerator());
     }
+
+////    @Bean("gaussSolveViewModel")
+//    public GaussSolveViewModelOutputBoundary gaussSolveViewModelOutputBoundary(GaussSolveOutputBoundary gaussSolveOutputBoundary) {
+//        return (GaussSolvePresenter) gaussSolveOutputBoundary();
+//    }
 }

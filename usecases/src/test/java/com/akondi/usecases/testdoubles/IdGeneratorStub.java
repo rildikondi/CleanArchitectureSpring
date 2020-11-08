@@ -1,7 +1,8 @@
 package com.akondi.usecases.testdoubles;
 
 
-import com.akondi.ports.usescases.gausssolve.IdGenerator;
+
+import com.akondi.usecases.gausssolve.IdGenerator;
 
 import java.util.concurrent.atomic.AtomicLong;
 

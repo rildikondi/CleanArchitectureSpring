@@ -1,6 +1,6 @@
 package com.akondi.webapplication.exception;
 
-import com.akondi.ports.database.GaussSolutionGateway;
+import com.akondi.usecases.database.GaussSolutionGateway;
 
 import java.util.HashMap;
 import java.util.Map;

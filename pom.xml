@@ -15,10 +15,9 @@
 
     <modules>
         <module>applicationdi</module>
-        <module>Entities</module>
+        <module>entities</module>
         <module>inmemorydb</module>
-        <module>ports</module>
-        <module>presenters</module>
+        <module>interfaceadapters</module>
         <module>usecases</module>
         <module>webapplication</module>
     </modules>

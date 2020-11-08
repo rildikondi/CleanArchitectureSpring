@@ -1,10 +1,9 @@
 package com.akondi.usecases.get.gausssolutions;
 
 import com.akondi.entities.GaussSolution;
-import com.akondi.ports.database.Database;
-import com.akondi.ports.usescases.Clock;
-import com.akondi.ports.usescases.get.gausssolutions.GetSolutionsDataRequest;
+import com.akondi.usecases.database.Database;
 import com.akondi.usecases.database.inmemory.InMemoryDatabase;
+import com.akondi.usecases.gausssolve.Clock;
 import com.akondi.usecases.testdoubles.ClockStub;
 import com.akondi.usecases.testdoubles.GaussSolutionsPresenterSpy;
 import org.junit.Before;

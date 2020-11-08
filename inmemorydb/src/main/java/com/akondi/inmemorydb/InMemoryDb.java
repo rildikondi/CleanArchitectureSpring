@@ -1,8 +1,7 @@
 package com.akondi.inmemorydb;
 
-import com.akondi.ports.database.Database;
-import com.akondi.ports.database.GaussSolutionGateway;
-
+import com.akondi.usecases.database.Database;
+import com.akondi.usecases.database.GaussSolutionGateway;
 
 public class InMemoryDb implements Database {
     private GaussSolutionGateway gaussSolutionGateway;
