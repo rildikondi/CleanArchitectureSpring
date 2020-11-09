@@ -65,13 +65,13 @@ The schema below shows the interaction  between <b>interfaceadapters</b> module 
 
 <br>
 <br>
-<b>Class diagram</b> below shows the dependencies of classes in interface adapter on the layer above in usecase module.
-Both the presenter and controller communicate with the usecase using the interfaces,
-<br>which help to pass the boundary and don't break the dependency rules.
+<b>Class diagram</b> below shows the dependencies of classes in <b>interfaceadapters> module on the layer above in <b>usecase</b> module.
+Both the <b>presenter</b> and <b>controller</b> communicate with the <b>usecase</b> using the <b>interfaces</b>,
+<br>which helps to pass the <b>boundary</b> and don't break the <b>dependency rules</b>.
 <br><b>GetGaussSolutionsController.class</b> in the <b>interfaceadapters</b> module uses the interface <b>GetGaussSolutionsInputBoundary</b> which is
 in the <b>usecase</b> module to send the request to the <b>GetGaussSolutions.class</b>. 
-<br>GetGaussSolutions.class is the usecase of getting the gauss solutions.
-<br>GetGaussSolutions.class implements <b>GetGaussSolutionsInputBoundary</b> interface and get the requset from <b>GetGaussSolutionsController.class</b>.
+<br><b>GetGaussSolutions.class</b> is the usecase of getting the gauss solutions.
+<br><b>GetGaussSolutions.class</b> implements <b>GetGaussSolutionsInputBoundary</b> interface and get the requset from <b>GetGaussSolutionsController.class</b>.
 <br>
 <br>On the same time <b>GetGaussSolutions.class</b> uses <b>GaussSolutionsOutputBoundary</b> interface.
 <br><b>GaussSolutionsOutputBoundary</b> interface is implemented by <b>GaussSolutionsPresenter.class</b> in <b>interfaceadapters</b> module. 
