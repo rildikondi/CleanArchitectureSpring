@@ -22,7 +22,8 @@ Clean Architecture main directory contains all the modules which realize the wor
 
 <br>
 <br>
-Dependency direction of the modules from the outermost to the center. Outside layer depends on the layer below it.
+<b>Dependency direction</b> of the modules from the outermost to the center.
+<br>Outside layer depends on the layer below it.
 <br>The inner layer has no dependency on the layer above and no information for any class or method from it.
 <br>Changes on the outer layer should not cause changes to the inner layer it.
 
@@ -40,8 +41,20 @@ Dependency direction of the modules from the outermost to the center. Outside la
 <br><b>webapplication</b> module uses <b>spring framework</b>.
 <br>The endpoints which are in this layer with help of spring annotations build together the entrypoints for the input.
 <br>Example schema of one case of Gauss elimination for linear equations with Clean Architecture.
+<br>This schema shows the interaction between <b>weabapplication</b> module and <b>interfaceadapters</b> module.
 
 <img src="https://github.com/rildikondi/CleanArchitectureSpring/blob/clean_architecture_by_layer/images/webapplication_schema.jpg" >
+
+<b>Class diagram</b> shows the dependencies of <b>GetGaussSolutionsEndpoint.class</b> in webapplication module from the <b>interfaceadapters</b> module.
+<br><b>GetGaussSolutionsEndpoint.class</b> uses two interfaces from  <b>interfaceadapters</b> module to cross the boundary between layers.
+<br><b>GetGaussSolutionsControllerInputBoundary</b> interface that is implemented by GetGaussSolutionsController class which gets the input (GetSolutionsControllerRequest).
+<br><b>GetGaussSolutionsController<b> will send the input to the usecase layer to be processed, later explained in details.
+<br>The second interface <b>GaussSolutionsPresenterOutputBoundary<b> interface that is implemented by <br>GaussSolutionsPresenter</b>
+<br>will be used by <b>GetGaussSolutionsEndpoint.class</b> to get the output (GaussSolutionsViewModel).
+<br>GaussSolutionsPresenter</b> receive the processed output from usecase layer , later explained in details. 
+
+<img src="https://github.com/rildikondi/CleanArchitectureSpring/blob/clean_architecture_by_layer/images/webapplication_class_diagram.jpg" >
+
 
 ## References:
 [https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)

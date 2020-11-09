@@ -1,4 +1,4 @@
-package com.akondi.interfaceadapters.presenters.getgausssolutions;
+package com.akondi.interfaceadapters.presenters.gausssolve;
 
 import com.akondi.interfaceadapters.viewmodels.GaussSolveViewModel;
 import com.akondi.usecases.gausssolve.GaussSolveOutputBoundary;

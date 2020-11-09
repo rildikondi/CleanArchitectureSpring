@@ -1,4 +1,4 @@
-package com.akondi.interfaceadapters.presenters.gausssolve;
+package com.akondi.interfaceadapters.presenters.getgausssolutions;
 
 import com.akondi.interfaceadapters.presenters.BaseGaussSolutionPresenter;
 import com.akondi.usecases.get.gausssolutions.GaussSolutionsResponse;
@@ -15,6 +15,7 @@ public class GaussSolutionsPresenter extends BaseGaussSolutionPresenter
         return viewModel;
     }
 
+    @Override
     public void present(GaussSolutionsResponse responseModel) {
         GaussSolutionsViewModel.GaussSolutionsViewModelBuilder gaussSolutionsViewModelBuilder = GaussSolutionsViewModel.builder();
         responseModel.getSolutions()

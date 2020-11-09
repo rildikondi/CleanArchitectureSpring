@@ -2,7 +2,7 @@ package com.akondi.webapplication.endpoints.gausssolve;
 
 import com.akondi.interfaceadapters.controllers.gausssolve.GaussSolveControllerInputBoundary;
 import com.akondi.interfaceadapters.controllers.gausssolve.GaussSolveControllerRequest;
-import com.akondi.interfaceadapters.presenters.getgausssolutions.GaussSolvePresenterOutputBoundary;
+import com.akondi.interfaceadapters.presenters.gausssolve.GaussSolvePresenterOutputBoundary;
 import com.akondi.interfaceadapters.viewmodels.GaussSolveViewModel;
 import com.akondi.webapplication.endpoints.BaseEndpoint;
 import io.swagger.annotations.ApiOperation;
