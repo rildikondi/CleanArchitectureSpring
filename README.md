@@ -63,6 +63,24 @@ The schema below shows the interaction  between <b>interfaceadapters</b> module 
 
 <img src="https://github.com/rildikondi/CleanArchitectureSpring/blob/clean_architecture_by_layer/images/interfaceadapters_schema.jpg" >
 
+<br>
+<br>
+<b>Class diagram</b> below shows the dependencies of classes in interface adapter on the layer above in usecase module.
+Both the presenter and controller communicate with the usecase using the interfaces,
+<br>which help to pass the boundary and don't break the dependency rules.
+<br><b>GetGaussSolutionsController.class</b> in the <b>interfaceadapters</b> module uses the interface <b>GetGaussSolutionsInputBoundary</b> which is
+in the <b>usecase</b> module to send the request to the <b>GetGaussSolutions.class</b>. 
+<br>GetGaussSolutions.class is the usecase of getting the gauss solutions.
+<br>GetGaussSolutions.class implements <b>GetGaussSolutionsInputBoundary</b> interface and get the requset from <b>GetGaussSolutionsController.class</b>.
+<br>
+<br>On the same time <b>GetGaussSolutions.class</b> uses <b>GaussSolutionsOutputBoundary</b> interface.
+<br><b>GaussSolutionsOutputBoundary</b> interface is implemented by <b>GaussSolutionsPresenter.class</b> in <b>interfaceadapters</b> module. 
+<br><b>GetGaussSolutions.class</b> presents the response to <b>GaussSolutionsPresenter.class</b> with the help of <b>GaussSolutionsOutputBoundary</b> interface.
+<br>In this way the direction of the dependency stays from interfaceadapters layer to usecase layer
+<br>without breaking any depency rules and without creating any dependency from the higher level module to the lower level module.
+
+
+<img src="https://github.com/rildikondi/CleanArchitectureSpring/blob/clean_architecture_by_layer/images/interfaceadapters_class_diagram.jpg" >
 
 
 ## References:
