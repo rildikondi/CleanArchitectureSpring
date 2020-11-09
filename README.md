@@ -55,6 +55,15 @@ will be used by <b>GetGaussSolutionsEndpoint.class</b> to get the output (GaussS
 
 <img src="https://github.com/rildikondi/CleanArchitectureSpring/blob/clean_architecture_by_layer/images/webapplication_class_diagram.jpg" >
 
+<br>
+<br>
+<b>interfaceadapters</b> module depends on the the module below it <b>usecases</b>.
+The schema below shows the interaction  between <b>interfaceadapters</b> module and <b>usecases</b>.
+
+
+<img src="https://github.com/rildikondi/CleanArchitectureSpring/blob/clean_architecture_by_layer/images/interfaceadapters_schema.jpg" >
+
+
 
 ## References:
 [https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
