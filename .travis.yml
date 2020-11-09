@@ -1,3 +1,5 @@
+git:
+  depth: 3
 language: java
 sudo: true
 dist: trusty
