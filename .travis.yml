@@ -1,4 +1,11 @@
 language: java
+sudo: true
+dist: trusty
+jdk: oraclejdk8
+addons:
+  apt:
+    packages:
+      - oracle-java8-installer
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
   - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
@@ -7,4 +14,6 @@ cache:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
 before_install:
-  - chmod a+x mnv
+  - chmod +x mvnw
+
+
