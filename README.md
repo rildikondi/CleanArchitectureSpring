@@ -57,7 +57,7 @@ will be used by <b>GetGaussSolutionsEndpoint.class</b> to get the output (GaussS
 
 <br>
 <br>
-<b>interfaceadapters</b> module depends on the the module below it <b>usecases</b>.
+<b>interfaceadapters</b> module depends on the the layer below it concretely on <b>usecases</b> module.
 The schema below shows the interaction  between <b>interfaceadapters</b> module and <b>usecases</b>.
 
 
