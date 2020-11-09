@@ -7,4 +7,4 @@ cache:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
 before_install:
-  - chmod a+x ./mnv
+  - chmod a+x mnv
