@@ -1,4 +1,4 @@
-# Clean Architecture
+# Clean Architecture [![Build Status](https://travis-ci.com/rildikondi/CleanArchitectureSpring.svg?branch=clean_architecture_by_layer)](https://travis-ci.com/github/rildikondi/CleanArchitectureSpring)
 
 <b>Clean Architecture</b> with multimodules written in Java and the web layer is build with the help of <b>Spring</b>.
 
