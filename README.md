@@ -50,7 +50,7 @@ Clean Architecture main directory contains all the modules which realize the wor
 <br><b>GetGaussSolutionsControllerInputBoundary</b> interface that is implemented by <b>GetGaussSolutionsController</b> class which gets the input (GetSolutionsControllerRequest).
 <br><b>GetGaussSolutionsController</b> will send the input to the <b>usecase layer</b> to be processed, later explained in details.
 <br>The second interface <b>GaussSolutionsPresenterOutputBoundary</b> interface that is implemented by <b>GaussSolutionsPresenter</b> class
-will be used by <b>GetGaussSolutionsEndpoint.class</b> to get the output (GaussSolutionsViewModel).
+will be used by <b>GetGaussSolutionsEndpoint.class</b> to get the output (GaussSolutionsViewModel) and present to the web.
 <br><b>GaussSolutionsPresenter</b> receive the processed output from <b>usecase layer</b>, later explained in details. 
 
 <img src="https://github.com/rildikondi/CleanArchitectureSpring/blob/clean_architecture_by_layer/images/webapplication_class_diagram.jpg" >
