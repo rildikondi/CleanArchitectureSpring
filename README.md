@@ -82,6 +82,22 @@ in the <b>usecase</b> module to send the request to the <b>GetGaussSolutions.cla
 
 <img src="https://github.com/rildikondi/CleanArchitectureSpring/blob/clean_architecture_by_layer/images/interfaceadapters_class_diagram.jpg" >
 
+<br>
+<br>
+And finally the <b>usecases</b> module schema which shows the only dependency to <b>entities</b> module.
+
+<img src="https://github.com/rildikondi/CleanArchitectureSpring/blob/clean_architecture_by_layer/images/usecase_module_schema.jpg" >
+
+<br>
+<br>
+<b>Class diagram of the usecase.</b>
+
+<img src="https://github.com/rildikondi/CleanArchitectureSpring/blob/clean_architecture_by_layer/images/usecase_class_diagram.jpg" >
+
+
+
+
+
 
 ## References:
 [https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
