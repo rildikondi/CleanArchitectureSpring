@@ -65,7 +65,7 @@ The schema below shows the interaction  between <b>interfaceadapters</b> module 
 
 <br>
 <br>
-<b>Class diagram</b> below shows the dependencies of classes in <b>interfaceadapters> module on the layer above in <b>usecase</b> module.
+<b>Class diagram</b> below shows the dependencies of classes in <b>interfaceadapters</b> module on the layer above in <b>usecase</b> module.
 Both the <b>presenter</b> and <b>controller</b> communicate with the <b>usecase</b> using the <b>interfaces</b>,
 <br>which helps to pass the <b>boundary</b> and don't break the <b>dependency rules</b>.
 <br><b>GetGaussSolutionsController.class</b> in the <b>interfaceadapters</b> module uses the interface <b>GetGaussSolutionsInputBoundary</b> which is
