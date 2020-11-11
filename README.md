@@ -98,39 +98,39 @@ And finally the <b>usecases</b> module schema which shows the only dependency to
 <b>Api  calls</b>
 
 <br><b>Api call to solve linear equations with gausssolver</b>
-POST
-http://localhost:8080/gausssolver-service/api/v1/gausssolver
-body 
-{
-    "a": [[2.0,4.0],[5.0, -6.0]],
-    "b": [8.0,4.0]
-}
-
-Response of the call: 
-
-{
-    "solution": [
-        2.0,
-        1.0
-    ]
-}
+<br>POST
+<br>http://localhost:8080/gausssolver-service/api/v1/gausssolver
+<br>body 
+<br>{
+<br>    "a": [[2.0,4.0],[5.0, -6.0]],
+<br>    "b": [8.0,4.0]
+<br>}
+<br>
+<br>Response of the call: 
+<br>
+<br>{
+<br>    "solution": [
+<br>        2.0,
+<br>        1.0
+<br>    ]
+<br>}
 
 <br><b>Api call to get the  solutions</b>
-GET
-http://localhost:8080/gausssolver-service/api/v1/gausssolver
-
-Response of the call:
-
-{
-    "solutionsData": [
-        {
-            "id": 1,
-            "date": "2020-11-11",
-            "document": "{\"a\":[[2.0,4.0],[5.0,-6.0]],\"b\":[8.0,4.0]}",
-            "result": "[2.0,1.0]"
-        }
-    ]
-}
+<br>GET
+<br>http://localhost:8080/gausssolver-service/api/v1/gausssolver
+<br>
+<br>Response of the call:
+<br>
+<br>{
+<br>   "solutionsData": [
+<br>        {
+<br>            "id": 1,
+<br>            "date": "2020-11-11",
+<br>            "document": "{\"a\":[[2.0,4.0],[5.0,-6.0]],\"b\":[8.0,4.0]}",
+<br>            "result": "[2.0,1.0]"
+<br>        }
+<br>    ]
+<br>}
 
 <br><b>Swagger documentation</b>
 http://localhost:8080/gausssolver-service/swagger-ui.html#/gausssolver
