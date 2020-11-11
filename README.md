@@ -94,10 +94,46 @@ And finally the <b>usecases</b> module schema which shows the only dependency to
 
 <img src="https://github.com/rildikondi/CleanArchitectureSpring/blob/clean_architecture_by_layer/images/usecase_class_diagram.jpg" >
 
+<br>
+<b>Api  calls</b>
 
+<br><b>Api call to solve linear equations with gausssolver</b>
+POST
+http://localhost:8080/gausssolver-service/api/v1/gausssolver
+body 
+{
+    "a": [[2.0,4.0],[5.0, -6.0]],
+    "b": [8.0,4.0]
+}
 
+Response of the call: 
 
+{
+    "solution": [
+        2.0,
+        1.0
+    ]
+}
 
+<br><b>Api call to get the  solutions</b>
+GET
+http://localhost:8080/gausssolver-service/api/v1/gausssolver
+
+Response of the call:
+
+{
+    "solutionsData": [
+        {
+            "id": 1,
+            "date": "2020-11-11",
+            "document": "{\"a\":[[2.0,4.0],[5.0,-6.0]],\"b\":[8.0,4.0]}",
+            "result": "[2.0,1.0]"
+        }
+    ]
+}
+
+<br><b>Swagger documentation</b>
+http://localhost:8080/gausssolver-service/swagger-ui.html#/gausssolver
 
 ## References:
 [https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
